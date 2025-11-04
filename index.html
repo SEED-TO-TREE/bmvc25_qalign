@@ -165,8 +165,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <div class="has-text-centered" style="padding: 2rem; border: 1px dashed #ccc; border-radius: 8px;">
-        <p>Teaser coming soon</p>
+      <div class="has-text-centered">
       </div>
     </div>
   </div>
@@ -179,7 +178,14 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item">
           <div class="has-text-centered" style="padding: 2rem; border: 1px dashed #ccc; border-radius: 8px;">
-            <p>Demos coming soon</p>
+            <!-- Demo Carousel -->
+            <p><b>Zero-shot appearance transfer across diverse categories.</b></p>
+            <p>
+              Q-Align preserves structural integrity while transferring fine-grained appearance details.
+              Competitors often suffer from texture spillover (e.g., feathers on background, metal on glass),
+              while Q-Align maintains semantic boundaries and stable attention.
+            </p>
+            <!-- Suggested carousel images: main qualitative grid from paper (birds/cars/animals/cakes/buildings) -->
           </div>
         </div>
       </div>
@@ -226,71 +232,76 @@
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Your Feature Section 1</h2>
+          <h2 class="title is-3">Query-Query Alignment</h2>
           <p>
-            Describe your first main feature or result here.
+            Zero-shot appearance transfer relies on cross-attention to map the appearance of a reference image
+            to a target structure. Existing diffusion-based methods rely on <b>query–key attention</b>,
+            which often suffers from <b>attention leakage</b>—unintended texture spillover to unrelated regions.
+          </p>
+          <p>
+            Q-Align introduces <b>Query–Query alignment</b> to compute a clean semantic correspondence between
+            source and reference images. Instead of matching queries to keys, we directly align queries in
+            the shared feature space of the diffusion model, enabling <b>cleaner and sharper semantic matching</b>.
           </p>
           <div class="has-text-centered" style="padding: 2rem; border: 1px dashed #ccc; border-radius: 8px;">
-            <p>Demo coming soon</p>
+            <!-- Put Figure: core Q-Q alignment diagram (from method figure) -->
+            <img src="static/figures/qq_figure/church_low.png" alt="Q-Q Alignment Illustration" style="max-width: 100%; height: auto;">
           </div>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Your Feature Section 2</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              Describe your second main feature or result here.
-            </p>
-            <div class="has-text-centered" style="padding: 2rem; border: 1px dashed #ccc; border-radius: 8px;">
-              <p>Demo coming soon</p>
-            </div>
+          <p>
+            Once query correspondences are established, we perform <b>Key–Value rearrangement</b>
+            to align feature memory slots across images. This directly enforces spatial consistency
+            and prevents misaligned texture propagation. The aligned KV pairs are then injected back into
+            the cross-attention layers, refining appearance transfer without distorting structure.
+          </p>
+          <p>
+            The entire pipeline works <b>without training, masks, or per-image optimization</b>,
+            making it efficient, general, and plug-and-play on any Stable Diffusion backbone.
+          </p>
+          <div class="has-text-centered" style="padding: 2rem; border: 1px dashed #ccc; border-radius: 8px;">
+            <!-- Put method block diagram (KV shuffle + attention refine) -->
+            <img src="static/figures/analysis/analysis_bmvc.jpg" alt="KV Rearrangement Pipeline" style="max-width: 100%; height: auto;">
           </div>
-
+          
+          <h2 class="title is-3">Attention Visualization</h2>
+          <p>
+            We visualize high-resolution attention maps to analyze attention leakage in prior approaches.
+            Baselines exhibit blurry and inconsistent cross-image attention, incorrectly attending to
+            background or irrelevant regions. Q-Align produces <b>sharp, compact, and semantically consistent</b>
+            attention patterns that clearly correspond to object parts, even under large viewpoint
+            and style differences.
+          </p>
+          <div class="has-text-centered" style="padding: 2rem; border: 1px dashed #ccc; border-radius: 8px;">
+            <!-- Put Figure: core Q-Q alignment diagram (from method figure) -->
+            <img src="static/figures/sup_bird_attn_map.jpg" alt="Attention Visualization" style="max-width: 100%; height: auto;">
+          </div>
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
 
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Animation / Additional Results</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolation / Additional Feature</h3>
         <div class="content has-text-justified">
           <p>
-            Interpolation demo coming soon.
+            Q-Align delivers strong performance across a wide spectrum of categories and styles.
+            It preserves the structure of birds, cars, animals, and architecture while transferring
+            rich, fine-grained appearance details like feathers, fur, metallic reflections, glass
+            transparency, and artistic painting styles.
           </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-full has-text-centered">
-            <div style="padding: 2rem; border: 1px dashed #ccc; border-radius: 8px;">
-              <p>Interpolation UI placeholder</p>
-            </div>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Additional Result / Feature</h3>
-        <div class="content has-text-justified">
           <p>
-            Describe another result or feature of your method here.
+            Our method consistently outperforms baselines in cases with strong pose differences,
+            complex textures, and cluttered backgrounds.
           </p>
         </div>
         <div class="content has-text-centered">
           <div class="has-text-centered" style="padding: 2rem; border: 1px dashed #ccc; border-radius: 8px;">
-            <p>Additional result demo coming soon</p>
+            <img src="static/figures/new_qualitative/new_qualitative.png" alt="Additional Result" style="max-width: 100%; height: auto;">
+          </div>
+          <div class="has-text-centered" style="padding: 2rem; border: 1px dashed #ccc; border-radius: 8px;">
+            <img src="static/figures/new_qualitative/supp_qualitative.png" alt="Additional Result" style="max-width: 100%; height: auto;">
           </div>
         </div>
         <!--/ Re-rendering. -->
@@ -300,27 +311,20 @@
     <!--/ Animation. -->
 
 
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Work / Acknowledgments</h2>
+  </div>
+</section>
 
-        <div class="content has-text-justified">
-          <p>
-            Mention related work or acknowledge contributions here.
-          </p>
-          <p>
-            <a href="#">Related Paper 1</a> describes work related to yours.
-          </p>
-          <p>
-            <a href="#">Related Paper 2</a> and <a href="#">Related Paper 3</a> also address similar problems.
-          </p>
-          <!-- Add more related work as needed -->
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
 
+<section class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title is-3">Highlights</h2>
+    <ul style="text-align: left; max-width: 700px; margin: auto;">
+      <li>✔️ Training-free zero-shot appearance transfer</li>
+      <li>✔️ Robust semantic alignment via <b>Query–Query matching</b></li>
+      <li>✔️ Prevents attention leakage and texture spillover</li>
+      <li>✔️ Preserves global structure while enhancing fine texture</li>
+      <li>✔️ Plug-and-play for Stable Diffusion and derivatives</li>
+    </ul>
   </div>
 </section>
 

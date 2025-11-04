@@ -1,0 +1,239 @@
+\begin{figure*}[t]
+    \centering    
+    % 첫 번째 행: 제목 라벨만 표시
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \caption*{Structure}
+    \end{subfigure}
+    \hspace{-0.5em} % Structure와 Appearance 사이의 간격 줄이기
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \caption*{Appearance}
+    \end{subfigure}
+    \hspace{2em} % Appearance와 Ours 비교 블록 사이 간격 더 벌리기
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \caption*{\proposed(Ours)}
+    \end{subfigure}
+    \hspace{-0.5em} % Ours와 CrossImage 사이의 간격 줄이기
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \caption*{Cross-Image}
+    \end{subfigure}
+    \hspace{-0.5em} % CrossImage와 DiffuseIT 사이의 간격 줄이기
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \caption*{DiffuseIT}
+    \end{subfigure}
+    \hspace{-0.5em} % DiffuseIT와 SpliceViT 사이의 간격 줄이기
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \caption*{SpliceViT}
+    \end{subfigure}
+
+    \vspace{0.3em} % 제목과 이미지 간격 조절
+
+    % 첫 번째 행 이미지
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/structure/image_5.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/appearance/image_5.png}
+    \end{subfigure}
+    \hspace{2em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/ours/image_5.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/crossimage/image_5.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/diffuseit/image_5.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/splicevit/image_5.png}
+    \end{subfigure}
+
+    \vspace{0.8em} % 행 간 간격 더 벌리기
+
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/structure/image_4.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/appearance/image_4.png}
+    \end{subfigure}
+    \hspace{2em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/ours/image_4.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/crossimage/image_4.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/diffuseit/image_4.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/splicevit/image_4.png}
+    \end{subfigure}
+
+    \vspace{0.8em} % 행 간 간격 더 벌리기
+    
+    
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/structure/image_1.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/appearance/image_1.png}
+    \end{subfigure}
+    \hspace{2em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/ours/image_1.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/crossimage/image_1.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/diffuseit/image_1.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/splicevit/image_1.png}
+    \end{subfigure}
+
+    \vspace{0.8em} % 행 간 간격 더 벌리기
+
+    % 두 번째 행 이미지
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/structure/image_2.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/appearance/image_2.png}
+    \end{subfigure}
+    \hspace{2em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/ours/image_2.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/crossimage/image_2.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/diffuseit/image_2.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/splicevit/image_2.png}
+    \end{subfigure}
+
+    \vspace{0.8em} % 행 간 간격 더 벌리기
+
+    % 세 번째 행 이미지
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/structure/image_3.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/appearance/image_3.png}
+    \end{subfigure}
+    \hspace{2em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/ours/image_3.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/crossimage/image_3.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/diffuseit/image_3.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/splicevit/image_3.png}
+    \end{subfigure}
+
+    \vspace{0.8em} % 행 간 간격 더 벌리기
+
+    % 네 번째 행 이미지
+    
+
+    % 다섯 번째 행 이미지
+    
+
+    % 여섯 번째 행 이미지
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/structure/image_6.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/appearance/image_6.png}
+    \end{subfigure}
+    \hspace{2em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/ours/image_6.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/crossimage/image_6.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/diffuseit/image_6.png}
+    \end{subfigure}
+    \hspace{-0.5em}
+    \begin{subfigure}[t]{0.15\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/qualitative_fig/splicevit/image_6.png}
+    \end{subfigure}
+
+    \caption{Qualitative comparison across different methods. Each row displays an example consisting of the structure image, appearance image, and the outputs from our method, Cross-Image, DiffuseIT, and SpliceViT. For demonstration purposes, we select samples that exhibit attention leakage in Cross-Image. More qualitative results are presented in the supplementary materials.}
+    \label{fig:qualitative_results}
+\end{figure*}
